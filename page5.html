@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>8 Seconds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="timer"></div>
+    <div class="flex-container">
+        <div id="prev"></div>
+        <div id="next"></div>
+    </div>
+    <button class="end-button" onclick="endPressed()">End</button>
+    <div id="continue"></div>
+    <div class="center-image" id="countryQuiz">
+        <img src="images/country.png" width="40%">
+    </div>
+
+    <div class="center-image" id="buttons">
+        <img id="chile" src="images/chile.png" height="70" onclick="correct()">
+        <img id="sweden" src="images/sweden.png" height="80" onclick="wrong()">
+    </div>
+
+    <script>
+        index = 5;
+        function correct() {
+            document.getElementById("countryQuiz").innerHTML = '<img src="images/pitbull.jpg" width="40%" alt="Pitbull on Walmart Soundcheck by Lunchbox LP is marked with CC BY 2.0. To view the terms, visit https://creativecommons.org/licenses/by/2.0/?ref=openverse">';
+            document.getElementById("buttons").innerHTML = '<h1>Mr Worldwide</h1>';
+            document.getElementById("buttons").style.marginTop = 0;
+        }
+
+        function wrong() {
+            document.getElementById("countryQuiz").innerHTML = '<h1>wrong</h1>';
+            document.getElementById("countryQuiz").style.marginTop = "20%";
+            document.getElementById("buttons").innerHTML = '';
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>

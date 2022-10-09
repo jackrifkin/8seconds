@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>8 Seconds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="timer"></div>
+    <div class="flex-container">
+        <div id="prev"></div>
+        <div id="next"></div>
+    </div>
+    <button class="end-button" onclick="endPressed()">End</button>
+    <div id="continue"></div>
+
+    <div class="center-image" id="animals">
+        <button onclick="moo()">
+            <img src="images/cow.png" height="200">
+        </button>
+        <button onclick="quack()">
+            <img src="images/duck.png" height="200">
+        </button>
+        <button onclick="oink()">
+            <img src="images/pig.png" height="200">
+        </button>
+    </div>
+
+    <audio id="mooAudio" src="audio/Moo.mp3"></audio>
+    <audio id="quackAudio" src="audio/Quack.mp3"></audio>
+    <audio id="oinkAudio" src="audio/Oink.mp3"></audio>
+
+    <script>
+        index = 9;
+
+        function moo() {
+            console.log("moo");
+            document.getElementById("mooAudio").play();
+        }
+        function quack() {
+            console.log("quack");
+            document.getElementById("quackAudio").play();
+        }
+        function oink() {
+            console.log("oink");
+            document.getElementById("oinkAudio").play();
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>

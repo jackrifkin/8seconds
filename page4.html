@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>8 Seconds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="timer"></div>
+    <div class="flex-container">
+        <div id="prev"></div>
+        <div id="next"></div>
+    </div>
+    <button class="end-button" onclick="endPressed()">End</button>
+    <div id="continue"></div>
+
+    <input type="checkbox" id="myCheckbox" onclick="checkTheBox()">
+
+    <script>
+        index = 4;
+        function checkTheBox() {
+            let box = document.getElementById("myCheckbox");
+            if (box.checked == true) {
+                document.body.style.backgroundImage = 'url("images/checkboxResult.jpeg")';
+            } else {
+                document.body.style.backgroundImage = 'none';
+            }
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
